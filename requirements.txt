@@ -1,0 +1,6 @@
+PyQt5
+gevent
+qrcode
+flask
+Pillow
+requests

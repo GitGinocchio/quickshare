@@ -1,0 +1,54 @@
+# This is a template configuration file for setting up quickshare.
+# Create a copy of this file, configure it, remove all comments, and save it as "config.cfg".
+
+# Values marked with an asterisk (*) or labeled as "required" are necessary for the application to start.
+
+# Values marked with a plus (+) or labeled as "optional" are not necessary for the application to start.
+# If they are not present, default values will be used.
+
+[http]
+# * (Required)
+# Local IP address for the HTTP tunnel.
+# Generally, this is the local address of your machine.
+address = 127.0.0.1
+
+# * (Required)
+# Port on which the HTTP tunnel will listen.
+port = 8080
+
+# + (Optional)
+# Subdomain for the HTTP tunnel.
+# If a subdomain is not specified, the subdomain will be randomly chosen by ngrok.
+subdomain = 
+
+[tcp]
+# * (Required)
+# Local IP address for the TCP tunnel.
+# Generally, this is the local address of your machine.
+address = 127.0.0.1
+
+# * (Required)
+# Port on which the TCP tunnel will listen.
+port = 8080
+
+# + (Optional)
+# Subdomain for the TCP tunnel.
+# If a subdomain is not specified, the subdomain will be randomly chosen by ngrok.
+subdomain = 
+
+[paths]
+# * (Required)
+# Path to the ngrok executable file.
+# Specify the relative or absolute path to the ngrok.exe file.
+ngrok-path = ./src/bin/ngrok.exe
+
+[secrets]
+# * (Required)
+# Authentication token for ngrok.
+# Obtain your token from the ngrok website at:
+#
+#   https://ngrok.com/
+#
+# Then paste it here.
+ngrok-token = 
+

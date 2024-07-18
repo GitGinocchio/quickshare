@@ -1,0 +1,37 @@
+
+.directories {
+    margin-right: 5px;
+}
+
+.path {
+    margin-left: 20px;
+    font-size: 25px;
+    display: flex;
+}
+
+.path .separator {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.folder {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Temporaneamente */
+    font-weight: bold; /* Temporaneamente */
+    color: #1e40af;
+    transition: color 0.1s, background-color 0.1s;
+    background-color: #2563eb33;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 0.01em 0.3em; 
+    font-size: 15px;
+    margin: -0.2em 0;
+    margin-bottom: 5px;
+    line-height: 1.7;
+    white-space: nowrap;
+}
+
+.folder:hover {
+    color: #2563eb;
+    background-color: #3b82f633;
+}

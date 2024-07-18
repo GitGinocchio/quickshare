@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>582</width>
+    <height>726</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>500</width>
+    <height>565</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>QuickShare</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QTabWidget" name="modes">
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="http">
+          <attribute name="title">
+           <string>HTTP</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_3">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QToolBox" name="http_modes">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QToolBox::tab { 
+  background-color: lightgray;
+  border-radius: 3px;
+  padding: 5px;
+ }</string>
+             </property>
+             <property name="currentIndex">
+              <number>0</number>
+             </property>
+             <property name="tabSpacing">
+              <number>5</number>
+             </property>
+             <widget class="QWidget" name="http_send">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>574</width>
+                <height>605</height>
+               </rect>
+              </property>
+              <attribute name="label">
+               <string>Send</string>
+              </attribute>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>0</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>0</number>
+               </property>
+               <property name="bottomMargin">
+                <number>0</number>
+               </property>
+               <item>
+                <widget class="QScrollArea" name="http_send_scrollarea">
+                 <property name="frameShape">
+                  <enum>QFrame::NoFrame</enum>
+                 </property>
+                 <property name="widgetResizable">
+                  <bool>true</bool>
+                 </property>
+                 <widget class="QWidget" name="http_send_widget">
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>557</width>
+                    <height>872</height>
+                   </rect>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_2">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item alignment="Qt::AlignTop">
+                    <widget class="QFrame" name="http_send_all">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_2">
+                      <property name="spacing">
+                       <number>6</number>
+                      </property>
+                      <property name="leftMargin">
+                       <number>9</number>
+                      </property>
+                      <property name="topMargin">
+                       <number>9</number>
+                      </property>
+                      <property name="rightMargin">
+                       <number>9</number>
+                      </property>
+                      <property name="bottomMargin">
+                       <number>9</number>
+                      </property>
+                      <item>
+                       <widget class="QGroupBox" name="files_group">
+                        <property name="title">
+                         <string>Shared Files</string>
+                        </property>
+                        <property name="flat">
+                         <bool>true</bool>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_8">
+                         <item alignment="Qt::AlignLeft">
+                          <widget class="QFrame" name="files_buttons">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QHBoxLayout" name="horizontalLayout_8">
+                            <property name="leftMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="topMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>0</number>
+                            </property>
+                            <property name="bottomMargin">
+                             <number>0</number>
+                            </property>
+                            <item alignment="Qt::AlignLeft">
+                             <widget class="QPushButton" name="add_dir">
+                              <property name="text">
+                               <string>Add Dir</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item alignment="Qt::AlignLeft">
+                             <widget class="QPushButton" name="add_files">
+                              <property name="text">
+                               <string>Add File/s</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item alignment="Qt::AlignLeft">
+                             <widget class="QPushButton" name="del_item">
+                              <property name="text">
+                               <string>Remove</string>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item alignment="Qt::AlignLeft">
+                          <widget class="QCheckBox" name="includesubfolders">
+                           <property name="toolTip">
+                            <string>If true, when you share a folder, the subfolders inside are also shared</string>
+                           </property>
+                           <property name="text">
+                            <string>Include Subfolders</string>
+                           </property>
+                           <property name="tristate">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QListWidget" name="shared_items">
+                           <property name="minimumSize">
+                            <size>
+                             <width>0</width>
+                             <height>130</height>
+                            </size>
+                           </property>
+                           <property name="sizeIncrement">
+                            <size>
+                             <width>0</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="font">
+                            <font>
+                             <pointsize>9</pointsize>
+                            </font>
+                           </property>
+                           <property name="focusPolicy">
+                            <enum>Qt::WheelFocus</enum>
+                           </property>
+                           <property name="acceptDrops">
+                            <bool>true</bool>
+                           </property>
+                           <property name="toolTip">
+                            <string>All files and folders here will be shared</string>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QListWidget {
+	border: 1px solid  rgb(186, 186, 186);
+	border-radius: 3px;
+	padding: 1px;
+}
+QListWidget::item {
+   padding: 5px;
+}
+QListWidget::item:selected {
+	background-color: #ffe5cc;
+    color: black;
+}
+QListWidget::item:focus {
+	background-color: #ffe5cc;
+    color: black;
+}
+QListWidget::item:hover {
+    background-color: #ffe5cc;
+ }</string>
+                           </property>
+                           <property name="autoScrollMargin">
+                            <number>16</number>
+                           </property>
+                           <property name="editTriggers">
+                            <set>QAbstractItemView::NoEditTriggers</set>
+                           </property>
+                           <property name="tabKeyNavigation">
+                            <bool>false</bool>
+                           </property>
+                           <property name="showDropIndicator" stdset="0">
+                            <bool>false</bool>
+                           </property>
+                           <property name="dragEnabled">
+                            <bool>false</bool>
+                           </property>
+                           <property name="dragDropOverwriteMode">
+                            <bool>false</bool>
+                           </property>
+                           <property name="dragDropMode">
+                            <enum>QAbstractItemView::NoDragDrop</enum>
+                           </property>
+                           <property name="alternatingRowColors">
+                            <bool>true</bool>
+                           </property>
+                           <property name="selectionMode">
+                            <enum>QAbstractItemView::NoSelection</enum>
+                           </property>
+                           <property name="textElideMode">
+                            <enum>Qt::ElideRight</enum>
+                           </property>
+                           <property name="movement">
+                            <enum>QListView::Static</enum>
+                           </property>
+                           <property name="flow">
+                            <enum>QListView::TopToBottom</enum>
+                           </property>
+                           <property name="isWrapping" stdset="0">
+                            <bool>false</bool>
+                           </property>
+                           <property name="resizeMode">
+                            <enum>QListView::Adjust</enum>
+                           </property>
+                           <property name="layoutMode">
+                            <enum>QListView::SinglePass</enum>
+                           </property>
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="gridSize">
+                            <size>
+                             <width>0</width>
+                             <height>26</height>
+                            </size>
+                           </property>
+                           <property name="viewMode">
+                            <enum>QListView::ListMode</enum>
+                           </property>
+                           <property name="modelColumn">
+                            <number>0</number>
+                           </property>
+                           <property name="uniformItemSizes">
+                            <bool>false</bool>
+                           </property>
+                           <property name="batchSize">
+                            <number>100</number>
+                           </property>
+                           <property name="sortingEnabled">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="securitymeasures_group">
+                        <property name="enabled">
+                         <bool>true</bool>
+                        </property>
+                        <property name="title">
+                         <string>Security Measures</string>
+                        </property>
+                        <property name="flat">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>true</bool>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_3" stretch="0,0">
+                         <property name="spacing">
+                          <number>6</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>6</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QFrame" name="password_frame">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QHBoxLayout" name="horizontalLayout_6">
+                            <item alignment="Qt::AlignLeft">
+                             <widget class="QCheckBox" name="password_checkbox">
+                              <property name="text">
+                               <string>Enable password</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item alignment="Qt::AlignRight">
+                             <widget class="QLineEdit" name="password">
+                              <property name="enabled">
+                               <bool>false</bool>
+                              </property>
+                              <property name="minimumSize">
+                               <size>
+                                <width>180</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="font">
+                               <font>
+                                <weight>50</weight>
+                                <bold>false</bold>
+                                <kerning>true</kerning>
+                               </font>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QLineEdit {
+	border-radius: 3px;
+	border: 1px solid rgb(186, 186, 186);
+}</string>
+                              </property>
+                              <property name="frame">
+                               <bool>true</bool>
+                              </property>
+                              <property name="echoMode">
+                               <enum>QLineEdit::PasswordEchoOnEdit</enum>
+                              </property>
+                              <property name="readOnly">
+                               <bool>false</bool>
+                              </property>
+                              <property name="placeholderText">
+                               <string>Write a password</string>
+                              </property>
+                              <property name="clearButtonEnabled">
+                               <bool>true</bool>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="addressfilter_frame">
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QVBoxLayout" name="verticalLayout_5">
+                            <property name="leftMargin">
+                             <number>8</number>
+                            </property>
+                            <property name="rightMargin">
+                             <number>8</number>
+                            </property>
+                            <item>
+                             <widget class="QFrame" name="frame_3">
+                              <property name="frameShape">
+                               <enum>QFrame::StyledPanel</enum>
+                              </property>
+                              <property name="frameShadow">
+                               <enum>QFrame::Raised</enum>
+                              </property>
+                              <layout class="QHBoxLayout" name="horizontalLayout_9">
+                               <property name="spacing">
+                                <number>0</number>
+                               </property>
+                               <property name="leftMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="topMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="rightMargin">
+                                <number>0</number>
+                               </property>
+                               <property name="bottomMargin">
+                                <number>0</number>
+                               </property>
+                               <item alignment="Qt::AlignLeft">
+                                <widget class="QCheckBox" name="addressfilter_checkbox">
+                                 <property name="text">
+                                  <string>Enable IP address filter</string>
+                                 </property>
+                                </widget>
+                               </item>
+                               <item alignment="Qt::AlignRight">
+                                <widget class="QFrame" name="addrfilterbuttons_frame">
+                                 <property name="frameShape">
+                                  <enum>QFrame::StyledPanel</enum>
+                                 </property>
+                                 <property name="frameShadow">
+                                  <enum>QFrame::Raised</enum>
+                                 </property>
+                                 <layout class="QHBoxLayout" name="horizontalLayout_10">
+                                  <property name="leftMargin">
+                                   <number>6</number>
+                                  </property>
+                                  <property name="topMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="rightMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <property name="bottomMargin">
+                                   <number>0</number>
+                                  </property>
+                                  <item>
+                                   <widget class="QLineEdit" name="address_line_edit">
+                                    <property name="enabled">
+                                     <bool>false</bool>
+                                    </property>
+                                    <property name="minimumSize">
+                                     <size>
+                                      <width>108</width>
+                                      <height>20</height>
+                                     </size>
+                                    </property>
+                                    <property name="styleSheet">
+                                     <string notr="true">QLineEdit {
+	border-radius: 3px;
+	border: 1px solid rgb(186, 186, 186);
+}</string>
+                                    </property>
+                                    <property name="inputMask">
+                                     <string/>
+                                    </property>
+                                    <property name="text">
+                                     <string/>
+                                    </property>
+                                    <property name="placeholderText">
+                                     <string>000.000.000.000</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="add_address">
+                                    <property name="enabled">
+                                     <bool>false</bool>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>50</width>
+                                      <height>16777215</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>Add</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="Line" name="line">
+                                    <property name="orientation">
+                                     <enum>Qt::Vertical</enum>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                  <item>
+                                   <widget class="QPushButton" name="del_address">
+                                    <property name="enabled">
+                                     <bool>false</bool>
+                                    </property>
+                                    <property name="maximumSize">
+                                     <size>
+                                      <width>70</width>
+                                      <height>16777215</height>
+                                     </size>
+                                    </property>
+                                    <property name="text">
+                                     <string>Remove</string>
+                                    </property>
+                                   </widget>
+                                  </item>
+                                 </layout>
+                                </widget>
+                               </item>
+                              </layout>
+                             </widget>
+                            </item>
+                            <item>
+                             <widget class="QListWidget" name="allowed_addresses">
+                              <property name="enabled">
+                               <bool>false</bool>
+                              </property>
+                              <property name="minimumSize">
+                               <size>
+                                <width>0</width>
+                                <height>130</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QListWidget {
+	border: 1px solid  rgb(186, 186, 186);
+	border-radius: 3px;
+	padding: 1px;
+}
+QListWidget::item {
+   padding: 5px;
+}
+QListWidget::item:selected {
+	background-color: #ffe5cc;
+    color: black;
+}
+QListWidget::item:focus {
+	background-color: #ffe5cc;
+    color: black;
+}
+QListWidget::item:hover {
+    background-color: #ffe5cc;
+ }</string>
+                              </property>
+                              <property name="editTriggers">
+                               <set>QAbstractItemView::AllEditTriggers</set>
+                              </property>
+                              <property name="showDropIndicator" stdset="0">
+                               <bool>false</bool>
+                              </property>
+                              <property name="dragDropOverwriteMode">
+                               <bool>true</bool>
+                              </property>
+                              <property name="alternatingRowColors">
+                               <bool>true</bool>
+                              </property>
+                              <property name="resizeMode">
+                               <enum>QListView::Adjust</enum>
+                              </property>
+                              <property name="layoutMode">
+                               <enum>QListView::SinglePass</enum>
+                              </property>
+                              <property name="selectionRectVisible">
+                               <bool>false</bool>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QGroupBox" name="limits_group">
+                        <property name="enabled">
+                         <bool>true</bool>
+                        </property>
+                        <property name="title">
+                         <string>Limits</string>
+                        </property>
+                        <property name="flat">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checkable">
+                         <bool>true</bool>
+                        </property>
+                        <property name="checked">
+                         <bool>true</bool>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_7">
+                         <property name="spacing">
+                          <number>6</number>
+                         </property>
+                         <property name="leftMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="topMargin">
+                          <number>6</number>
+                         </property>
+                         <property name="rightMargin">
+                          <number>0</number>
+                         </property>
+                         <property name="bottomMargin">
+                          <number>0</number>
+                         </property>
+                         <item>
+                          <widget class="QFrame" name="downloadlimit_frame">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QHBoxLayout" name="horizontalLayout_7">
+                            <item alignment="Qt::AlignLeft">
+                             <widget class="QCheckBox" name="downloadlimit_checkbox">
+                              <property name="enabled">
+                               <bool>true</bool>
+                              </property>
+                              <property name="text">
+                               <string>Enable download limit</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item alignment="Qt::AlignRight">
+                             <widget class="QSpinBox" name="downloadlimit">
+                              <property name="enabled">
+                               <bool>false</bool>
+                              </property>
+                              <property name="minimumSize">
+                               <size>
+                                <width>50</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QSpinBox {
+	border-radius: 3px;
+	border: 1px solid rgb(186, 186, 186);
+}</string>
+                              </property>
+                              <property name="showGroupSeparator" stdset="0">
+                               <bool>false</bool>
+                              </property>
+                              <property name="minimum">
+                               <number>1</number>
+                              </property>
+                              <property name="maximum">
+                               <number>99</number>
+                              </property>
+                              <property name="value">
+                               <number>1</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                         <item>
+                          <widget class="QFrame" name="maximum_connections_group">
+                           <property name="enabled">
+                            <bool>true</bool>
+                           </property>
+                           <property name="toolTip">
+                            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;This option allows you to set up a maximum limit of connections (for IP address) that can be accepted&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           </property>
+                           <property name="whatsThis">
+                            <string/>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::StyledPanel</enum>
+                           </property>
+                           <property name="frameShadow">
+                            <enum>QFrame::Raised</enum>
+                           </property>
+                           <layout class="QHBoxLayout" name="horizontalLayout_5">
+                            <item alignment="Qt::AlignLeft">
+                             <widget class="QCheckBox" name="connectionlimit_checkbox">
+                              <property name="text">
+                               <string>Enable connections limit</string>
+                              </property>
+                             </widget>
+                            </item>
+                            <item alignment="Qt::AlignRight">
+                             <widget class="QSpinBox" name="connectionlimit">
+                              <property name="enabled">
+                               <bool>false</bool>
+                              </property>
+                              <property name="minimumSize">
+                               <size>
+                                <width>50</width>
+                                <height>20</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">QSpinBox {
+	border-radius: 3px;
+	border: 1px solid rgb(186, 186, 186);
+}</string>
+                              </property>
+                              <property name="showGroupSeparator" stdset="0">
+                               <bool>false</bool>
+                              </property>
+                              <property name="minimum">
+                               <number>1</number>
+                              </property>
+                              <property name="maximum">
+                               <number>99</number>
+                              </property>
+                              <property name="value">
+                               <number>1</number>
+                              </property>
+                             </widget>
+                            </item>
+                           </layout>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QFrame" name="share_frame">
+                        <property name="frameShape">
+                         <enum>QFrame::StyledPanel</enum>
+                        </property>
+                        <property name="frameShadow">
+                         <enum>QFrame::Raised</enum>
+                        </property>
+                        <layout class="QVBoxLayout" name="verticalLayout_10">
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QPushButton" name="sharebutton">
+                           <property name="sizePolicy">
+                            <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+                             <horstretch>0</horstretch>
+                             <verstretch>0</verstretch>
+                            </sizepolicy>
+                           </property>
+                           <property name="minimumSize">
+                            <size>
+                             <width>240</width>
+                             <height>0</height>
+                            </size>
+                           </property>
+                           <property name="text">
+                            <string>Share</string>
+                           </property>
+                           <property name="flat">
+                            <bool>false</bool>
+                           </property>
+                          </widget>
+                         </item>
+                         <item alignment="Qt::AlignHCenter">
+                          <widget class="QLabel" name="qrcode">
+                           <property name="minimumSize">
+                            <size>
+                             <width>217</width>
+                             <height>217</height>
+                            </size>
+                           </property>
+                           <property name="contextMenuPolicy">
+                            <enum>Qt::DefaultContextMenu</enum>
+                           </property>
+                           <property name="toolTip">
+                            <string>Right-click to visit or copy the link</string>
+                           </property>
+                           <property name="statusTip">
+                            <string/>
+                           </property>
+                           <property name="whatsThis">
+                            <string/>
+                           </property>
+                           <property name="accessibleName">
+                            <string/>
+                           </property>
+                           <property name="accessibleDescription">
+                            <string/>
+                           </property>
+                           <property name="styleSheet">
+                            <string notr="true">QLabel {
+	padding: 5 10 5 10;
+	background-color: rgb(255, 255, 255);
+	border-radius: 3px;
+	border: 1px solid rgb(186, 186, 186);
+}</string>
+                           </property>
+                           <property name="frameShape">
+                            <enum>QFrame::NoFrame</enum>
+                           </property>
+                           <property name="lineWidth">
+                            <number>2</number>
+                           </property>
+                           <property name="openExternalLinks">
+                            <bool>true</bool>
+                           </property>
+                          </widget>
+                         </item>
+                        </layout>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+             <widget class="QWidget" name="http_receive">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>574</width>
+                <height>605</height>
+               </rect>
+              </property>
+              <attribute name="label">
+               <string>Receive</string>
+              </attribute>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tcp">
+          <attribute name="title">
+           <string>TCP</string>
+          </attribute>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QToolBox" name="tcp_modes">
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <property name="tabSpacing">
+              <number>0</number>
+             </property>
+             <widget class="QWidget" name="tcp_send">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>574</width>
+                <height>615</height>
+               </rect>
+              </property>
+              <attribute name="label">
+               <string>Send</string>
+              </attribute>
+             </widget>
+             <widget class="QWidget" name="tcp_receive">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>574</width>
+                <height>615</height>
+               </rect>
+              </property>
+              <attribute name="label">
+               <string>Receive</string>
+              </attribute>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>582</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+   </widget>
+   <addaction name="menuOptions"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="statusTip">
+    <string/>
+   </property>
+   <property name="sizeGripEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>password_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>password</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>74</x>
+     <y>407</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>420</x>
+     <y>407</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>downloadlimit_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>downloadlimit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>472</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>485</x>
+     <y>472</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>connectionlimit_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>connectionlimit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>90</x>
+     <y>451</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>508</x>
+     <y>451</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addressfilter_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>add_address</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>404</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addressfilter_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>del_address</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>436</x>
+     <y>404</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addressfilter_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>allowed_addresses</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>135</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>460</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>addressfilter_checkbox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>address_line_edit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>89</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>248</x>
+     <y>278</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
