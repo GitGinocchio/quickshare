@@ -75,7 +75,7 @@
        <item>
         <widget class="QTabWidget" name="modes">
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="http">
           <attribute name="title">
@@ -158,7 +158,7 @@
                   <property name="geometry">
                    <rect>
                     <x>0</x>
-                    <y>0</y>
+                    <y>-134</y>
                     <width>557</width>
                     <height>872</height>
                    </rect>
@@ -873,6 +873,21 @@ QListWidget::item:hover {
                            <property name="text">
                             <string>Share</string>
                            </property>
+                           <property name="checkable">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoRepeat">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoExclusive">
+                            <bool>false</bool>
+                           </property>
+                           <property name="autoDefault">
+                            <bool>false</bool>
+                           </property>
+                           <property name="default">
+                            <bool>false</bool>
+                           </property>
                            <property name="flat">
                             <bool>false</bool>
                            </property>
@@ -985,8 +1000,8 @@ QListWidget::item:hover {
                <rect>
                 <x>0</x>
                 <y>0</y>
-                <width>574</width>
-                <height>615</height>
+                <width>98</width>
+                <height>28</height>
                </rect>
               </property>
               <attribute name="label">

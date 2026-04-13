@@ -1,6 +1,6 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QDialog, QFileDialog, QMessageBox, QListWidget, QMenu, QAction
 from PyQt5.QtGui import QPixmap, QDesktopServices
-from PyQt5.QtCore import QUrl, Qt
+from PyQt5.QtCore import QUrl, Qt, QTimer
 from PIL import Image, ImageFilter
 from PyQt5.uic import loadUi
 import qrcode
@@ -18,6 +18,7 @@ class AuthDialog(QDialog):
         QDialog.__init__(self,parent)
         loadUi('./src/ui/authdialog.ui',self)
         self.exit.clicked.connect(self.onExitClicked)
+        self.setWindowTitle('QuickShare')
 
         if not tokenexist(): 
             self.show()
@@ -25,7 +26,7 @@ class AuthDialog(QDialog):
             self.parent().show()
 
     def onExitClicked(self):
-        sys.exit(1)
+        sys.exit(0)
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -52,6 +53,10 @@ class MainWindow(QMainWindow):
         self.qrcode.setContextMenuPolicy(Qt.CustomContextMenu)
         self.qrcode.customContextMenuRequested.connect(self.onQrCodeRightClick)
         self.sharebutton.clicked.connect(self.onShareButtonClicked)
+
+        self.sharebtnTimer = QTimer(self)
+        self.sharebtnTimer.setInterval(3000)
+        self.sharebtnTimer.timeout.connect(self.onShareButtonTimeout)
 
     # Folders & Files
 
@@ -173,20 +178,7 @@ class MainWindow(QMainWindow):
 
     def onAddAddrButtonClicked(self):
         address = self.address_line_edit.text().strip()
-        ip_regex = re.compile(
-            r'^(?!10\.)(?!172\.(?:1[6-9]|2[0-9]|3[0-1])\.)(?!192\.168\.)'
-            r'(?!127\.)(?!169\.254\.)'
-            r'(?!224\.|239\.)(?!240\.)'
-            r'(?:[1-9][0-9]?\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|'
-            r'2[0-4][0-9]\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}|'
-            r'25[0-5]\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3})$'
-        )
-
-        if ip_regex.match(address):
-            self.allowed_addresses.addItem(address)
-        else:
-            QMessageBox.warning(self, "Error", "Please enter a valid public IP address.")
-        
+        self.allowed_addresses.addItem(address)
         self.address_line_edit.clear()
     
     def onDelAddrButtonClicked(self):
@@ -282,9 +274,14 @@ class MainWindow(QMainWindow):
                 if self.limits_group.isChecked():
 
                     if self.downloadlimit_checkbox.isChecked():
-                        limit = int(self.downloadlimit.value())
+                        download_limit = int(self.downloadlimit.value())
                     else:
-                        limit = -1
+                        download_limit = -1
+
+                    if self.connectionlimit_checkbox.isChecked():
+                        connection_limit = int(self.connectionlimit.value())
+                    else:
+                        connection_limit = -1
 
             except Exception as e:
                 msg = QMessageBox(self)
@@ -296,20 +293,32 @@ class MainWindow(QMainWindow):
             else:
                 self.statusbar.showMessage('')
                 self.sharebutton.setText("Stop")
-                self.server.set_mode([os.path.normpath(self.shared_items.item(i).text()) for i in range(self.shared_items.count())],includesubfolders,allowed_ips)
+                self.server.set_mode(
+                    [os.path.normpath(self.shared_items.item(i).text()) for i in range(self.shared_items.count())],
+                    includesubfolders,
+                    allowed_ips, 
+                    password
+                    )
                 self.server.start(0)
                 self.tunnel.start()
         else:
             self.sharebutton.setText("Share")
             if self.server.isRunning(): 
-                self.server.stop()
+                self.server.close()
             self.tunnel.close()
             self.qrcode.setPixmap(self.createQrCode("https://0000-00-000-000-00.ngrok-free.app",4))
+        
+        self.sharebutton.setEnabled(False)
+        self.sharebtnTimer.start()
+
+    def onShareButtonTimeout(self):
+        self.sharebutton.setEnabled(True)
+        self.sharebtnTimer.stop()
 
     # Assert Safe Close
 
     def closeEvent(self, event):
-        self.server.stop()
+        self.server.close()
         self.server.wait()
         self.tunnel.close()
         self.tunnel.waitForFinished(3000)

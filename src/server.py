@@ -13,6 +13,7 @@ class HTTPServer(QThread):
         self.app.add_url_rule('/','/',view_func=self.index)
         self.app.add_url_rule('/login','/login',view_func=self.login)
         self.app.add_url_rule('/shared','/shared',view_func=self.shared)
+        self.app.add_url_rule('/preview','/preview',view_func=self.preview)
         self.app.add_url_rule('/download','/download',view_func=self.download)
         self.app.before_request(self.before_request)
 
@@ -21,6 +22,7 @@ class HTTPServer(QThread):
         self.allowed_ips = []
         self.banned_ips = []    # next feature
         self.connected_ips = []
+        self.password = None
 
         # local address and port
         self.address = config.get('http','address')
@@ -82,10 +84,11 @@ class HTTPServer(QThread):
 
         return branch
 
-    def set_mode(self, shareditems : list[str], sharesubfolders : bool = False, allowed_ips : list = []):
+    def set_mode(self, shareditems : list[str], sharesubfolders : bool = False, allowed_ips : list = [], password : str = None):
         self.sharesubfolders = sharesubfolders
         self.allowed_ips = allowed_ips
         self.shareditems = shareditems
+        self.password = password
 
     # Flask
 
@@ -99,7 +102,10 @@ class HTTPServer(QThread):
             if self.allowed_ips and client_ip not in self.allowed_ips:
                 abort(403)
             
-            self.connected_ips.append(client_ip)
+            if self.password:
+                redirect('/login')
+            else:
+                self.connected_ips.append(client_ip)
 
     def index(self):
         return redirect('/shared')
@@ -128,6 +134,9 @@ class HTTPServer(QThread):
             dirs=self.get_branch(self.dir)
         )
  
+    def preview(self):
+        return redirect('/shared')
+
     def download(self):
         try:
             response = send_file(request.args['file'], as_attachment=True)
@@ -141,7 +150,7 @@ class HTTPServer(QThread):
         self.server = WSGIServer(('localhost',8080),self.app)
         self.server.serve_forever()
 
-    def stop(self):
+    def close(self):
         if self.server and not self.server.closed: 
             self.server.stop()
 

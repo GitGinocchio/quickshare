@@ -34,6 +34,7 @@ class TunnelApi(QThread):
     def run(self):
         try:
             response = requests.get('http://127.0.0.1:4040/api/tunnels',timeout=3).json()
+            print(response)
             self.public_url = response['tunnels'][0]['public_url']
             self.publicurlsignal.emit({"status" : "success", "url" : self.public_url})
         except requests.exceptions.RequestException as e:
